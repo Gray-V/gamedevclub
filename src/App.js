@@ -1,35 +1,27 @@
+// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import EventsPage from './pages/EventsPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactsPage from './pages/ContactsPage';
 import AboutPage from './pages/AboutPage';
-import './App.css'; // Your CSS file to style the components
+import './App.css'; // Your global CSS styles
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/events">Events</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/contacts">Contacts</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contacts" element={<ContactsPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/events" element={<EventsPage />} />
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </div>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contacts" element={<ContactsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
     </Router>
   );
-}
+};
 
 export default App;
