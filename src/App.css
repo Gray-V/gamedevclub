@@ -1,4 +1,25 @@
 /* Base styles */
+h1 {
+  margin-top: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.page {
+  padding: 20px;
+  margin: 20px;
+  background: #A2C5A8;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+/* navbar */
+
 .navbar {
   background-color: #ffffff;
   overflow: hidden;
@@ -9,11 +30,6 @@
   top: 0;
   width: 100%;
   left:0;
-}
-
-
-h1 {
-  margin-top: 0;
 }
 
 .navbar a {
@@ -33,13 +49,10 @@ h1 {
   color: gray;
 }
 
-.page {
-  padding: 20px;
-  margin: 20px;
-  background: #A2C5A8;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+
+
+
+/* about page general */
 
 .about-page {
   max-width: 100%;
@@ -64,6 +77,10 @@ h1 {
   font-size: 150%;
   padding: 7%;
 }
+
+
+
+/* eboard */
 
 .eboard-section p {
   font-size: 100%;
@@ -95,35 +112,34 @@ h1 {
   border: 1px solid #6a6a6a;
 }
 
+
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: center; /* Center the nav items when stacked */
+    align-items: center; 
   }
 
   .navbar a {
-    width: 100%; /* Full width for stacked nav items */
-    padding: 10px; /* Increase padding */
+    width: 100%;
+    padding: 10px;
   }
 
   .eboard-member {
-    width: 45%; /* Adjust member width for tablet screens */
+    width: 45%; 
   }
 }
 
 @media (max-width: 480px) {
   .navbar a {
-    padding: 15px; /* Further increase padding for smaller screens */
+    padding: 15px; 
   }
 
   .eboard-member {
-    width: 90%; /* Adjust member width for mobile screens */
+    width: 90%; 
   }
 }
 
-/* Ensure no horizontal overflow due to padding/margins */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+
