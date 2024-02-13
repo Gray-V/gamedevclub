@@ -1,20 +1,27 @@
+/* Base styles */
 .navbar {
   background-color: #ffffff;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left:0;
 }
+
 
 h1 {
   margin-top: 0;
-  margin-bottom: 10%;
 }
+
 .navbar a {
-  float: left;
-  display: block;
   color: rgb(0, 0, 0);
   text-align: center;
   padding: 1%;
   text-decoration: none;
-  flex: auto;
+  flex: left;
 }
 
 .navbar a:hover {
@@ -23,8 +30,7 @@ h1 {
 }
 
 .navbar a.active {
-  background-color: #A2C5A8;
-  color: white;
+  color: gray;
 }
 
 .page {
@@ -37,32 +43,35 @@ h1 {
 
 .about-page {
   max-width: 100%;
-  left: 0;
   margin: 0 auto;
   text-align: center;
   background-color: #D9D9D9;
   background-image: url('photos/riot.png');
   background-blend-mode: overlay;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  font-weight: bold;
 }
-
 
 .about-page h1 {
   padding-bottom: 1%;
-  padding-top: 1%;
+  padding-top: 5%;
+  font-size: 400%;
 }
-
 
 .about-page p {
-  margin-bottom: 6%;
+  font-size: 150%;
+  padding: 7%;
 }
 
+.eboard-section p {
+  font-size: 100%;
+  padding: .1%;
+}
 .eboard-section {
-  height: 100%;
   padding-top: 1%;
-  padding-bottom: 1%;
+  padding-bottom: 5%;
   background-color: #A2C5A8;
 }
 
@@ -75,13 +84,46 @@ h1 {
 
 .eboard-member {
   width: 10%;
-  height: 10%;
+  padding: 1%;
   text-align: center;
+  background-color: #D9D9D9;
 }
 
 .eboard-member img {
-  width: 100%; 
+  width: 100%;
   height: auto;
-  margin-bottom: 1rem;
-  border: 1px solid #6a6a6a; 
+  border: 1px solid #6a6a6a;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center; /* Center the nav items when stacked */
+  }
+
+  .navbar a {
+    width: 100%; /* Full width for stacked nav items */
+    padding: 10px; /* Increase padding */
+  }
+
+  .eboard-member {
+    width: 45%; /* Adjust member width for tablet screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    padding: 15px; /* Further increase padding for smaller screens */
+  }
+
+  .eboard-member {
+    width: 90%; /* Adjust member width for mobile screens */
+  }
+}
+
+/* Ensure no horizontal overflow due to padding/margins */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }

@@ -12,8 +12,8 @@ const AboutPage = () => {
   return (
     <div className="about-page">
       <h1>About</h1>
-      <p>Our clubs mission is to</p>
-      <p>[Club info]</p>
+      <p>Our clubs mission is to provide a safe fun space for LMU students from all backgrounds
+        to explore the world of game development.</p>
       <section className="eboard-section">
         <h2>E-Board Members</h2>
         <div className="eboard-members">
