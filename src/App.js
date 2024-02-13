@@ -7,7 +7,7 @@ import EventsPage from './pages/EventsPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactsPage from './pages/ContactsPage';
 import AboutPage from './pages/AboutPage';
-import './App.css'; // Your global CSS styles
+import './App.css';
 
 const App = () => {
   return (
@@ -15,10 +15,11 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/contacts" element={<ContactsPage />} />
-        <Route path="/about" element={<AboutPage />} />
+        
       </Routes>
     </Router>
   );
